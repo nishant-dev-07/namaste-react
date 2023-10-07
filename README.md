@@ -63,3 +63,16 @@ Top uses two hookes
     --> whenever an state variable change react find the diffrence between virtual dom and re rerender my component
 
 => why is react is fast -> React is doing  at efficiance dom manipulation
+
+# 2 type of Routing in webapps
+- Client side Routing => not making any network call when changing pages
+- Server side Routing
+ 
+
+ # Redux Toolkit
+    - Install @reduxjs/tookit and react-redux
+    - Build our store
+    - Connect our store to our app
+    - Slice(cartSlice)
+    - dispach(action)
+    - Selector 
