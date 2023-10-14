@@ -76,6 +76,7 @@ const Body = () => {
         <div className="filter">
             <div className='search m-4 p-4'>
                 <input type="text"
+                    data-testid="searchInput"
                      className='border border-solid border-black'
                      onChange={(e) => setSearchText(e.target.value)}
                      value={searchText}
@@ -100,9 +101,8 @@ const Body = () => {
                 onClick={() => {
                     // Filter logic here
                     
-                    filterdList = listOfRestaurant.filter((res) =>  res.info.avgRating > 4.1      
-                    );
-                    setFiltredRestraunt(filterdList)
+                    const filterdListTop = listOfRestaurant.filter((res) =>  res.info.avgRating > 4.1);
+                    setFiltredRestraunt(filterdListTop)
                 }}
                 >
                 Top Rated Restaurant
@@ -128,6 +128,7 @@ const Body = () => {
                     to={"/restaurants/"+restaurant.info.id}>
 
                         {
+                            
                              restaurant.info.avgRating > 4 ? <WithTopLable  resData={restaurant.info}/> : <RestaurantCard  resData={restaurant.info}/>
                         }
                        
