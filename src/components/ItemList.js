@@ -6,10 +6,10 @@ import { addItem } from "../utils/cartSlice";
 const ItemList = ({ items }) => {
   
   const dispach = useDispatch()
-  const handleAddItem = () => {
+  const handleAddItem = (item) => {
     // Dispach an action
 
-    dispach(addItem("pizza"))
+    dispach(addItem(item))
   }
   
 
@@ -36,7 +36,7 @@ const ItemList = ({ items }) => {
           <div className="p-4 w-3/12">
             <div className="absolute">
               <button className="p-2 bg-white shadow-lg m-auto rounded-sm "
-                onClick = {handleAddItem}
+                onClick = {() => handleAddItem(item)}
               >
                 ADD +
               </button>
@@ -56,5 +56,7 @@ const ItemList = ({ items }) => {
     </div>
   );
 };
+
+
 
 export default ItemList;

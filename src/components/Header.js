@@ -23,7 +23,7 @@ const Header = () => {
 
     const cartItems = useSelector((store) => store.cart.items);
 
-    
+    console.log(cartItems);
     
     return (
         <div className="header flex justify-between shadow-lg mb-2">
@@ -48,7 +48,7 @@ const Header = () => {
                         <Link to="/grocerry">Grocery</Link>
                     </li>
                     <li className="px-4 font-bold text-lg">
-                        Cart ({cartItems.length})
+                       <Link to="/cart"> Cart ({cartItems.length})</Link>
                     </li>
                     <button onClick = {() => {
                          btnName === "Login" 
